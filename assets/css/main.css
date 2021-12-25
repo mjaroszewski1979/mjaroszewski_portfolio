@@ -3341,8 +3341,6 @@ td {
 	text-align: center;
 }
 
-
-
 pre code {
 display: block;
 background: lightgray;
@@ -3353,3 +3351,8 @@ max-width: 100%;
 min-width: 100px;
 padding: 1em;
 }
+
+.resume {
+	display: block;
+	max-width: 100%;
+  }
