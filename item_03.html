@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>MJaroszewski | MJ Trading</title>
+		<title>MJaroszewski | Rides Shop</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -40,17 +40,17 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<h2>Menu</h2>
-                        <ul>
+						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="item_01.html">Urban Style</a></li>
 							<li><a href="item_02.html">3D Dining</a></li>
-							<li><a href="item_03.html">MJ Trading</a></li>
+							<li><a href="item_03.html">Rides Shop</a></li>
 							<li><a href="item_04.html">Geo Api</a></li>
 							<li><a href="item_05.html">Market Bias</a></li>
 							<li><a href="item_06.html">Trend Follower</a></li>
 							<li><a href="item_07.html">Google Scraper</a></li>
 							<li><a href="item_08.html">Millionaires Club</a></li>
-							<li><a href="item_09.html">John Smith</a></li>
+							<li><a href="item_09.html">Dogs of Dow</a></li>
 							<li><a href="item_10.html">DELTA</a></li>
 							<li><a href="item_11.html">NATURE</a></li>
 							<li><a href="item_12.html">Stooq API</a></li>
@@ -61,20 +61,16 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>MJ Trading | Dogs of Dow</h1>
-							<span class="image main"><img src="images/mockups/dogs_mockup.png" alt="" /></span>
+							<h1>Rides Shop | Django ORM</h1>
+							<span class="image main"><img src="images/mockups/rides_mockup.png" alt="" /></span>
 
-							<h3>This is an application build with one of the fastest Python web frameworks - FastAPI. In fact, its speed is at par with Node.js and Go, 
-                                it also creates plugins easily using dependency injection. The main function is to display current trend direction for 10 best high-yield 
-                                dividend members of the Dow Jones Industrial Index included in Yahoo Finance's database. After receiving user input, application is 
-                                gaining access to particular stock historical data by utilizing pandas-datareader. 
+							<h3>This is a Python application powered by Django and its Object-Relational Mapper to provide convenient access to stored data. 
 							</h3>
-                            <p>
-                                A sizable part of any API project concerns the routine 
-                                stuff like data validation and conversion. In FastAPI-speak, our path operation functions (request handlers) would depend on get_current_user 
-                                and we will leverage the "basic" HTTP authentication scheme. For password hashing, we can use Werkzeug Security to define functions that 
-                                handle password hashing and checking if a password is correct.
-                            </p>
+							<p>
+								In fact, Django's ORM is just a pythonical way to create SQL to query and manipulate your database and get results in a pythonic fashion. 
+								In this particular case users are able to view different car categories, as well as detailed informations about the very product they are interested in, 
+								and finally to narrow search results with filters. 
+							</p>
 							<br>
 							<section>
 								<div class="tools">
@@ -85,8 +81,8 @@
 										  <th class="head">Docker</th>
 										</tr>
 										<tr>
-										  <td><a href="https://dogs-of-dow.herokuapp.com/" target="blank" class="live"><img src="images/heroku.png" alt=""></a></td>
-										  <td><a href="https://github.com/mjaroszewski1979/dogs_of_dow_v1" target="blank" class="live"><img src="images/github.png" alt=""></a></td>
+										  <td><a href="https://rides-shop.herokuapp.com/" target="blank" class="live"><img src="images/heroku.png" alt=""></a></td>
+										  <td><a href="https://github.com/mjaroszewski1979/rides-shop-v1" target="blank" class="live"><img src="images/github.png" alt=""></a></td>
 										  <td><a href="https://hub.docker.com/r/maciej1245/dogs_of_dow" target="blank" class="live"><img src="images/docker.png" alt=""></a></td>
 										</tr>
 									</table>
@@ -95,13 +91,16 @@
 							<br>
                             <h3 id='features'>Features:</h3>
                             <ul>
-                                <li>CSS Flexbox applied to simplify complex layout patterns </li>
-                                <li>Fully responsive web design</li>
-                                <li>Embedded Font Awesome icon </li>
-                                <li>Advanced HTML and CSS minification process aims to reduce webpage loading speed </li>
-                                <li>CSS custom properties for fast and forward-looking design </li>
-                                <li>Moving the fetching data function to a background thread to avoid unnecessary delays during request handling </li>
-                                <li>Implementing Jinja2 extensible templating engine for automatic HTML escaping to prevent cross-site scripting (XSS) attacks </li>
+                                <li>Working with template inheritance mechanism to build a base “skeleton” template that contains all the common elements and defines blocks that child templates can override </li>
+                                <li>Taking full advantage of Django's built-in features like cross-site request forgery protection to ensure safe data transfer in web forms to a database</li>
+                                <li>Associating multiple records in a table with multiple records in another table ( many-to-many relationship ) to achieve optimal ORM performance </li>
+                                <li>Breaking logic into smaller parts by adding various new Django applications to an existing project</li>
+                                <li>Writing as much functionality as possible in models or utility files instead of views </li>
+                                <li>Serving static files with WhiteNoise to accomplish high performance and efficiency without depending on nginx, Amazon S3 or any other external service</li>
+                                <li>Relying on Cloudinary to provide a secure and comprehensive API for easily uploading media files from server-side code</li>
+								<li>Storing app’s secure credentials in environment variables</li>
+								<li>Using django-filter which allows users to filter down a queryset based on a model’s fields and displaying the form to let them do this</li>
+								<li>Implementing the paginator class - it takes in a queryset (such as a Django model) and splits it into Page objects that are then displayed across these pages while still using the same HTML document</li>
                             </ul>
 						</div>
 					</div>
