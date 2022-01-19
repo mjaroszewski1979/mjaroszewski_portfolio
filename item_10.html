@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>MJaroszewski | DELTA</title>
+		<title>Digital Gold | BITCOIN</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -51,7 +51,7 @@
 							<li><a href="item_07.html">Google Scraper</a></li>
 							<li><a href="item_08.html">Millionaires Club</a></li>
 							<li><a href="item_09.html">Dogs of Dow</a></li>
-							<li><a href="item_10.html">DELTA</a></li>
+							<li><a href="item_10.html">Digital Gold</a></li>
 							<li><a href="item_11.html">NATURE</a></li>
 							<li><a href="item_12.html">Stooq API</a></li>
 							<li><a href="resume.html">Resume</a></li>
@@ -61,65 +61,76 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>DELTA | Real Estate</h1>
-							<span class="image main"><img src="images/mockups/delta_mockup.png" alt="" /></span>
+							<h1>Digital Gold | BITCOIN</h1>
+							<span class="image main"><img src="images/mockups/digital_mockup.png" alt="" /></span>
 
-							<h3>This is a static website powered by HTML, CSS and Slick - jQuery plugin for creating fully customizable, 
-                                responsive and mobile friendly carousels/sliders.
+							<h3>This is a Python application powered by Django and its Object-Relational Mapper to show trading signals based on mathematical algorithm, that indicates it is a good time to buy or sell Bitcoin. 
                             </h3>
-							<br>
+							<p>
+								After fetching data from Yahoo Finance API and calculating current trend direction using 252 days lookback period - approximately 1 year - the results will be displayed in form of a table.
+							</p>
 							<section>
 								<div class="tools">
 									<table class="alt">
 										<tr>
 										  <th class="head">Live</th>
 										  <th class="head">Code</th>
+										  <th class="head">Docker</th>
 										</tr>
 										<tr>
-										  <td><a href="https://delta-real-estate.netlify.app/" target="blank" class="live"><img src="images/netlify.png" alt=""></a></td>
-										  <td><a href="https://github.com/mjaroszewski1979/delta-real-estate" target="blank" class="live"><img src="images/github.png" alt=""></a></td>
+										  <td><a href="http://taurustrading.pythonanywhere.com/" target="blank" class="live"><img src="images/pyan.png" alt=""></a></td>
+										  <td><a href="https://github.com/mjaroszewski1979/golden-cross-v1" target="blank" class="live"><img src="images/github.png" alt=""></a></td>
+										  <td><a href="https://hub.docker.com/r/maciej1245/digital-gold" target="blank" class="live"><img src="images/docker.png" alt=""></a></td>
 										</tr>
 									</table>
 								</div>
 							</section>
 							<br>
-                            <h3 id='features'>Structure:</h3>
-                            <ul>
-                                <li>Header</li>
-                                <ul>
-                                    <li>Company logo</li>
-                                    <li>Navigation bar - hamburger menu</li>
-                                </ul>
-                                <li>Body</li>
-                                <ul>
-                                    <li>Main section</li>
-                                    <li>How it works - find, buy or invest in property</li>
-                                    <li>Example of property listing with pictures and offer details</li>
-                                    <li>Meet the real estate agents</li>
-                                    <li>Basic information about the company's services</li>
-                                    <li>Customer testimonial examples</li>
-                                    <li>Contact form and address details</li>
-                                </ul>
-                                <li>Footer</li>
-                                <ul>
-                                    <li>About section</li>
-                                    <li>Quick links</li>
-                                    <li>Newsletter subscription</li>
-                                    <li>Social media follow</li>
-                                </ul>
-                            </ul>
-                            <br>
                             <h3 id='features'>Features:</h3>
                             <ul>
-                                <li>Compatible with devices of all sizes </li>
-                                <li>CSS custom properties for fast and forward-looking design</li>
-                                <li>HTML and CSS minification process aims to reduce webpage loading speed</li>
-                                <li>CSS Flexbox applied to simplify complex layout design</li>
-                                <li>Font awesome icons collection</li>
-                                <li>Advanced CSS styling techniques applied: transitions, animations and image filtering</li>
-                                <li>Netlify form submission and spam filters </li>
+                                <li>Integrating MailChimp API with the application to provide a platform to receive emails from the audience who subscribes to our website </li>
+                                <li>Utilizing Technical Analysis Library for efficient process of data manipulation widely used in quantitative finance</li>
+                                <li>Connecting to Yahoo Finance API using pandas datareader to ensure the highest quality when importing historical time series</li>
+                                <li>Breaking logic into smaller parts by adding various new Django applications to an existing project</li>
+                                <li>Writing as much functionality as possible in models or utility files instead of views </li>
+                                <li>Taking full advantage of Django's built-in features like cross-site request forgery protection to ensure safe data transfer in web forms to a database</li>
+                                <li>Storing app’s secure credentials in environment variables</li>
+								<li>Utilizing setUp method to handle especially expensive setup operations for all of the tests within a module</li>
+								<li>Performing extensive selenium tests using 'page object pattern' instead of making raw WebDriver calls to have cleaner code:</li>
+								<ul>
+									<li>Utilizing DRY (Don’t repeat yourself) principle to minimize code duplication by having all ID-locators in one place</li>
+									<li>Setting an interface between web page’s elements and tests</li>
+									<li>Avoiding usage of WebDriver APIs in test methods</li>
+									<li>Encapsulating the services of web pages, not only exposing their elements</li>
+								</ul>
                             </ul>
-                            <br>
+							<hr>
+							<h3 id='features'>Code coverage:</h3>
+							<ul>
+								<li>Selenium and unit tests combined</li>
+							</ul>
+							<pre>
+								<code>coverage run -p manage.py test gold && coverage run -p manage.py test tests_selenium && coverage combine && coverage html</code>
+							</pre>
+							<span class="image main"><img src="images/coverage/digital_gold.png" alt="" style="width: 75%;"/></span>
+							<hr>
+                            <h3 id='features'>Docker info:</h3>
+                            <ul>
+                                <li>Pull an image from my Docker Hub - click on the icon below</li>
+                                <li>Create and start a container</li>
+                                <li>Pass environment variables to your container</li>
+                                <ul>
+                                    <li>with the -e flag</li>
+                                    <pre>
+                                        <code>docker run -p 8000:8000 -e MAILCHIMP_API_KEY="&lt;your api key&gt;" -e MAILCHIMP_DATA_CENTER="&lt;the last 4 characters of your api key e.g. us20&gt;" -e MAILCHIMP_EMAIL_LIST_ID="&lt;your audience id&gt;" &lt;imagename&gt; </code>
+                                    </pre>
+                                    <li>or using .env file</li>
+                                    <pre>
+                                        <code>docker run -p 8000:8000 --env-file .env &lt;imagename&gt;</code>
+                                    </pre>
+                                </ul>
+                            </ul>
+
 						</div>
 					</div>
 

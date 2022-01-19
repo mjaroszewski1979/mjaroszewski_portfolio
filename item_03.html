@@ -51,7 +51,7 @@
 							<li><a href="item_07.html">Google Scraper</a></li>
 							<li><a href="item_08.html">Millionaires Club</a></li>
 							<li><a href="item_09.html">Dogs of Dow</a></li>
-							<li><a href="item_10.html">DELTA</a></li>
+							<li><a href="item_10.html">Digital Gold</a></li>
 							<li><a href="item_11.html">NATURE</a></li>
 							<li><a href="item_12.html">Stooq API</a></li>
 							<li><a href="resume.html">Resume</a></li>
@@ -83,7 +83,7 @@
 										<tr>
 										  <td><a href="https://rides-shop.herokuapp.com/" target="blank" class="live"><img src="images/heroku.png" alt=""></a></td>
 										  <td><a href="https://github.com/mjaroszewski1979/rides-shop-v1" target="blank" class="live"><img src="images/github.png" alt=""></a></td>
-										  <td><a href="https://hub.docker.com/r/maciej1245/dogs_of_dow" target="blank" class="live"><img src="images/docker.png" alt=""></a></td>
+										  <td><a href="https://hub.docker.com/r/maciej1245/rides_shop" target="blank" class="live"><img src="images/docker.png" alt=""></a></td>
 										</tr>
 									</table>
 								</div>
@@ -101,6 +101,32 @@
 								<li>Storing app’s secure credentials in environment variables</li>
 								<li>Using django-filter which allows users to filter down a queryset based on a model’s fields and displaying the form to let them do this</li>
 								<li>Implementing the paginator class - it takes in a queryset (such as a Django model) and splits it into Page objects that are then displayed across these pages while still using the same HTML document</li>
+                            </ul>
+							<hr>
+							<h3 id='features'>Code coverage:</h3>
+							<ul>
+								<li>Selenium and unit tests combined</li>
+							</ul>
+							<pre>
+								<code>coverage run -p manage.py test unit_tests && coverage run -p manage.py test selenium_tests && coverage combine && coverage html</code>
+							</pre>
+							<span class="image main"><img src="images/coverage/rides_shop.png" alt="" style="width: 75%;"/></span>
+							<hr>
+                            <h3 id='features'>Docker info:</h3>
+                            <ul>
+                                <li>Pull an image from my Docker Hub - click on the icon below</li>
+                                <li>Create and start a container</li>
+                                <li>Pass environment variables to your container</li>
+                                <ul>
+                                    <li>with the -e flag</li>
+                                    <pre>
+                                        <code>docker run -p 8000:8000 -e SECRET_KEY="&lt;your secret key&gt;" &lt;imagename&gt; </code>
+                                    </pre>
+                                    <li>or using .env file</li>
+                                    <pre>
+                                        <code>docker run -p 8000:8000 --env-file .env &lt;imagename&gt;</code>
+                                    </pre>
+                                </ul>
                             </ul>
 						</div>
 					</div>

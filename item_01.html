@@ -51,7 +51,7 @@
 							<li><a href="item_07.html">Google Scraper</a></li>
 							<li><a href="item_08.html">Millionaires Club</a></li>
 							<li><a href="item_09.html">Dogs of Dow</a></li>
-							<li><a href="item_10.html">DELTA</a></li>
+							<li><a href="item_10.html">Digital Gold</a></li>
 							<li><a href="item_11.html">NATURE</a></li>
 							<li><a href="item_12.html">Stooq API</a></li>
 							<li><a href="resume.html">Resume</a></li>
@@ -65,8 +65,10 @@
 							<span class="image main"><img src="images/mockups/urban_mockup.png" alt="" /></span>
 
 							<h3>This is a Django e-commerce website powered by Stripe library to provide convenient access to the Stripe API from applications written in the Python language. 
-								Its main function is to take full advantage of the custom models - users, categories and products, to make it possible for the vendors to add merchandise, create accounts and log in.
 							</h3>
+							<p>
+								Its main function is to take full advantage of the custom models - users, categories and products, to make it possible for the vendors to add merchandise, create accounts and log in.
+							</p>
 							<br>
 							<section>
 								<div class="tools">
@@ -99,7 +101,16 @@
 								<li>Relying on Cloudinary to provide a secure and comprehensive API for easily uploading media files from server-side code</li>
 								<li>Storing app’s secure credentials in environment variables</li>
 							</ul>
-							<br>   
+							<hr>
+							<h3 id='features'>Code coverage:</h3>
+							<ul>
+								<li>Selenium and unit tests combined</li>
+							</ul>
+							<pre>
+								<code>coverage run -p manage.py test unit_tests && coverage run -p manage.py test selenium_tests && coverage combine && coverage html</code>
+							</pre>
+							<span class="image main"><img src="images/coverage/urban_style.png" alt="" style="width: 75%;"/></span>
+							<hr>   
 							<h3 id='features'>Docker info:</h3>
 							<ul>
 								<li>Pull an image from my Docker Hub - click on the icon below</li>
