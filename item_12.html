@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>MJaroszewski | Stooq API</title>
+		<title>MJaroszewski | Global Macro</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,7 +25,6 @@
 							<!-- Logo -->
 								<a href="index.html" class="logo">
 									<span class="symbol"><img src="images/python.png" alt=""></i></span><span class="title">MJaroszewski</span>
-								</a>
 
 							<!-- Nav -->
 								<nav>
@@ -53,7 +52,7 @@
 							<li><a href="item_09.html">Dogs of Dow</a></li>
 							<li><a href="item_10.html">Digital Gold</a></li>
 							<li><a href="item_11.html">Quant Catalog</a></li>
-							<li><a href="item_12.html">Stooq API</a></li>
+							<li><a href="item_12.html">Global Macro</a></li>
 							<li><a href="resume.html">Resume</a></li>
 						</ul>
 					</nav>
@@ -61,17 +60,17 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Stooq API | Trend Filter</h1>
-							<span class="image main"><img src="images/mockups/stooq_mockup.png" alt="" /></span>
+							<h1>Global Macro | Interactive Charts</h1>
+							<span class="image main"><img src="images/mockups/gm_mockup.png" alt="" /></span>
 
-							<h3>This is an application build with one of the fastest Python web frameworks - FastAPI. 
-                                The main function is to display current trend direction for all financial instruments included in Stooq's database.
+							<h3>This is a Django application powered by HTMX to assist in building rich client-side experience.
                             </h3>
 							<hr>
-                            <p>
-                                After receiving user's input, application is gaining access to the historical data and then calculates moving averages 
-                                by using 50-day, 100-day and 200-day lookback period.
-                            </p>
+							<p>
+								It provides with access to highly interactive graphs created using Bokeh for more impactful data visualization. 
+								Users have now the opportunity to study clear, elegant, and insightful charts. 
+								Proper visualization brings clarity of data which helps in decision-making.
+							</p>
 							<section>
 								<div class="tools">
 									<table class="alt">
@@ -79,26 +78,42 @@
 										  <th class="head">Live</th>
 										  <th class="head">Code</th>
 										  <th class="head">Docker</th>
+										  <th class="head">Selenium</th>
 										</tr>
 										<tr>
-										  <td><a href="https://8xl3m1.deta.dev/" target="blank" class="live"><img src="images/deta.png" alt=""></a></td>
-										  <td><a href="https://github.com/mjaroszewski1979/stooq-api" target="blank" class="live"><img src="images/github.png" alt=""></a></td>
-										  <td><a href="https://hub.docker.com/r/maciej1245/stooqapi" target="blank" class="live"><img src="images/docker.png" alt=""></a></td>
+										  <td><a href="https://globalmacro.herokuapp.com/" target="blank" class="live"><img src="images/heroku.png" alt=""></a></td>
+										  <td><a href="https://github.com/mjaroszewski1979/django_global_macro" target="blank" class="live"><img src="images/github.png" alt=""></a></td>
+										  <td><a href="https://github.com/mjaroszewski1979/django_global_macro/blob/main/docker-compose.yml" target="blank" class="live"><img src="images/docker.png" alt=""></a></td>
+										  <td><a href="https://github.com/mjaroszewski1979/django_global_macro/tree/main/tests_selenium" target="blank" class="live"><img src="images/selenium.png" alt=""></a></td>
 										</tr>
 									</table>
 								</div>
 							</section>
 							<br>
-                            <h3 id='features'>Features:</h3>
+							<h3 id='features'>Features:</h3>
                             <ul>
-                                <li>Basic HTML landing/index page </li>
-                                <li>Interactive API documentation and exploration web user interfaces provided by FastAPI</li>
-                                <li>Returns HTTP Exception with status code of 404 for non existing symbols/tickers </li>
-                                <li>Embedded interactive plotly visualizations chart </li>
+                                <li>Connecting to FRED API using pandas-datareader as well as requests library to ensure the highest quality when importing historical time series</li>
+								<li>Using threading module which allows a program to run multiple operations concurrently in the same process space</li>
+								<li>Working with template inheritance mechanism to build a base “skeleton” template that contains all the common elements and defines blocks that child templates can override</li>
+								<li>Taking full advantage of HTMX - dependency-free library to access modern browser features directly from HTML, rather than using javascript</li>
+								<li>Serving static files with WhiteNoise to accomplish high performance and efficiency without depending on nginx, Amazon S3 or any other external service</li>
+								<li>Implementing Bokeh's customizable parameters to gain full control over data visualizations when creating line charts, bar plots or hexagonal tiles to show binned aggregations</li>
+								<li>Breaking logic into smaller parts by adding various new Django applications to an existing project</li>
+								<li>Storing app’s secure credentials in environment variables</li>
+								<li>Utilizing setUp method to handle especially expensive setup operations for all of the tests within a module</li>
+								<li>Performing extensive selenium tests using 'page object pattern' instead of making raw WebDriver calls to have cleaner code:
+									<ul>
+										<li>Utilizing DRY (Don’t repeat yourself) principle to minimize code duplication by having all ID-locators in one place</li>
+										<li>Setting an interface between web page’s elements and tests</li>
+										<li>Avoiding usage of WebDriver APIs in test methods</li>
+										<li>Encapsulating the services of web pages, not only exposing their elements</li>
+									</ul>
+								</li>
                             </ul>
 							<hr>
 							<h3 id='features'>Code coverage:</h3>
-							<span class="image main"><img src="images/coverage/stooq_api.png" alt="" style="width: 75%;"/></span>
+							<span class="image main"><img src="images/coverage/global_macro.png" alt="" style="width: 75%;"/></span>
+                           
 						</div>
 					</div>
 
