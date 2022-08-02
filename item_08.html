@@ -49,7 +49,7 @@
 							<li><a href="item_05.html">Market Bias</a></li>
 							<li><a href="item_06.html">Trend Follower</a></li>
 							<li><a href="item_07.html">Google Scraper</a></li>
-							<li><a href="item_08.html">Millionaires Club</a></li>
+							<li><a href="item_08.html">My Rides</a></li>
 							<li><a href="item_09.html">Dogs of Dow</a></li>
 							<li><a href="item_10.html">Digital Gold</a></li>
 							<li><a href="item_11.html">Quant Catalog</a></li>
@@ -61,18 +61,15 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Millionaires Club | CPI by Econdb</h1>
-							<span class="image main"><img src="images/mockups/mclub_mockup.png" alt="" /></span>
+							<h1>My Rides | Dynamic Web App</h1>
+							<span class="image main"><img src="images/mockups/mjcars_mockup.png" alt="" /></span>
 
-							<h3>This is a Python application powered by FastAPI - high-performance web framework - to reduce about 40% of human (developer) induced errors. 
-                                Its main function is to display current CPI readings for all countries included in Econdb's macroeconomic database.
+							<h3>This is a Django application powered by HTMX to assist in building rich client-side experience.
                             </h3>
                             <p>
-                                After receiving user input, 
-                                application is gaining access to particular Consumer Price Index historical data by utilizing pandas-datareader. The latest reading is being compared 
-                                with 12-month average calculated using Numpy's mean function. The result is a statistical estimate and it can be helpful in measuring of inflation. 
-                                For the world's top 5 largest economies website provides information on actual changes in the prices of goods and services.
-                            </p>
+                                It will allow users to register and authenticate with google account. Once logged in you can create your own list of favorite cars and upload an image. 
+								Thanks to implementing drag-and-drop reordering there is also a possibility of dynamically changing order of elements 
+								which is automatically reflected in database.
 							<hr>
 							<section>
 								<div class="tools">
@@ -81,11 +78,13 @@
 										  <th class="head">Live</th>
 										  <th class="head">Code</th>
 										  <th class="head">Docker</th>
+										  <th class="head">Docs</th>
 										</tr>
 										<tr>
-										  <td><a href="https://kq7b57.deta.dev/" target="blank" class="live"><img src="images/deta.png" alt=""></a></td>
-										  <td><a href="https://github.com/mjaroszewski1979/millionaires_club_v1" target="blank" class="live"><img src="images/github.png" alt=""></a></td>
-										  <td><a href="https://hub.docker.com/r/maciej1245/ml_club" target="blank" class="live"><img src="images/docker.png" alt=""></a></td>
+										  <td><a href="https://django-mjcars.herokuapp.com/https://django-mjcars.herokuapp.com/" target="blank" class="live"><img src="images/heroku.png" alt=""></a></td>
+										  <td><a href="https://github.com/mjaroszewski1979/django_car" target="blank" class="live"><img src="images/github.png" alt=""></a></td>
+										  <td><a href="https://djangocarsdocs.netlify.app/" target="blank" class="live"><img src="images/docker_compose.png" alt=""></a></td>
+										  <td><a href="https://github.com/mjaroszewski1979/django_car/blob/main/docker-compose.yml" target="blank" class="live"><img src="images/sphinx.png" alt=""></a></td>
 										</tr>
 									</table>
 								</div>
@@ -93,17 +92,29 @@
 							<br>
                             <h3 id='features'>Features:</h3>
                             <ul>
-                                <li>CSS Flexbox applied to simplify complex layout patterns </li>
+                                <li>Working with template inheritance mechanism to build a base “skeleton” template that contains all the common elements and defines blocks that child templates can override </li>
                                 <li>Fully responsive web design</li>
-                                <li>Embedded Font Awesome icon </li>
-                                <li>Advanced HTML and CSS minification process aims to reduce webpage loading speed </li>
-                                <li>CSS custom properties for fast and forward-looking design </li>
-                                <li>Moving the fetching data function to a background thread to avoid unnecessary delays during request handling </li>
-                                <li>Implementing Jinja2 extensible templating engine for automatic HTML escaping to prevent cross-site scripting (XSS) attacks </li>
+                                <li>Applying LoginRequiredMixin to ensure that the requesting user is authenticated</li>
+                                <li>Taking full advantage of HTMX - dependency-free library to access modern browser features directly from HTML, rather than using javascript</li>
+                                <li>Configuring Django to load and serve up user uploaded media files via an Amazon S3 bucket</li>
+                                <li>Managing user authentication using the django-allauth package, which allows login and registration using Social Accounts, like Google</li>
+                                <li>Breaking logic into smaller parts by adding various new Django applications to an existing project</li>
+								<li>Implementing Django's built-in features like cross-site request forgery protection to ensure safe data transfer in web forms to a database</li>
+								<li>Storing app’s secure credentials in environment variables</li>
+								<li>Writing as much functionality as possible in models or utility files instead of views</li>
+								<li>Setting-up sphinx-apidoc to automatically build a nice module index with links to documentation generated from the docstrings</li>
+								<li>Utilizing setUp method to handle especially expensive setup operations for all of the tests within a module</li>
+								<li>Performing extensive selenium tests using 'page object pattern' instead of making raw WebDriver calls to have cleaner code:</li>
+								<ul>
+									<li>Utilizing DRY (Don’t repeat yourself) principle to minimize code duplication by having all ID-locators in one place</li>
+									<li>Setting an interface between web page’s elements and tests</li>
+									<li>Avoiding usage of WebDriver APIs in test methods</li>
+									<li>Encapsulating the services of web pages, not only exposing their elements</li>
+								</ul>
                             </ul>
 							<hr>
 							<h3 id='features'>Code coverage:</h3>
-							<span class="image main"><img src="images/coverage/millionaires_club.png" alt="" style="width: 75%;"/></span>
+							<span class="image main"><img src="images/coverage/mj_cars.png" alt="" style="width: 75%;"/></span>
 						</div>
 					</div>
 
