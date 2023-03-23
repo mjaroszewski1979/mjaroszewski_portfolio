@@ -62,26 +62,52 @@
         <section class="section" id="blog">
             <!-- container -->
             <div class="container text-center">
-                <p class="section-subtitle text-light"><strong>Recent Projects</strong></p>
-                <h6 class="section-title mb-6 text-light">Artificial Intelligence</h6>
+                <p class="section-subtitle text-secondary"><strong>Django Application</strong></p>
+                <h6 class="section-title mb-6 text-light">Famous Investors</h6>
                 <!-- blog-wrapper -->
+
                 <div class="blog-card">
                     <div class="blog-card-header">
-                        <img src="assets/imgs/ai-tools.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <img src="assets/imgs/famous-investors.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                     </div>
                     <div class="blog-card-body">
-                        <h5 class="blog-card-title">ChatGPT and MIdJourney for Digital Marketing</h6>
-                        <p><b>I've recently been experimenting with various AI tools to streamline my repeatable tasks and increase efficiency.
-                            One of the areas where they have been especially useful for me is in automating various affiliate marketing processes. For example, I've been using AI-powered SEO strategies for my newly created blog.
-                            I've found ChatGPT to be incredibly useful in generating high-quality content quickly and efficiently.
-                            Another AI tool that has really blown my mind is MidJourney, which has amazing art creation capabilities. This tool uses AI algorithms to generate unique and creative designs, which can be used for everything from logos to web graphics. As a creative person, I find this tool to be incredibly inspiring and exciting.
-
+                        <h5 class="blog-card-title">This application utilizes the Django framework and its Object-Relational Mapper (ORM) to facilitate the retrieval of stored data.</h6>
+                            <p><b>It is connected to a MySQL database hosted on the Pythonanywhere server. The software's primary objective is to enable users to execute complex filtering operations while prioritizing the speed and efficiency of querying.
+                                By utilizing this software, users can save valuable time by executing advanced filtering operations quickly and efficiently. Additionally, the software's Python and Django backend offer flexibility and customizability, making it an ideal choice for users who want to customize their querying process to fit their specific needs. 
                         </b></p>
+                        <a href="https://github.com/mjaroszewski1979/investors_v2" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
                     </div>
                 </div><!-- end of blog wrapper -->
+                <h2>Features:</h2>
 
-               
-    
+                <table class="table table-borderless v-align-center">
+                    <tbody>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>Django's <strong>Cross-Site Request Forgery Protection</strong> works by using a unique token to validate each form submission on the server-side, and also includes other built-in security features like user authentication and authorization, password hashing, and SSL encryption to protect against common security threats.</li>
+                                <br>
+                                <li>With Django's<strong> annotate() function</strong>, developers can compute new fields based on existing queryset fields, like the average rating of a product, total comments on a blog post, or total orders by a customer, resulting in more efficient code and improved application performance.</li>
+                                <br>
+                                <li>Django's <strong>aggregate() function</strong> is a powerful tool for developers to perform complex calculations and obtain summary statistics on a queryset efficiently with minimal code.</li>
+                                <br>
+                                <li>By using <strong>select_related</strong>, developers can significantly reduce the number of database queries needed to retrieve data, which can improve the performance of their application.</li>
+                                <br>
+                                <li><strong>Breaking down logic into smaller parts</strong>: to achieve improved code organization, maintainability, and scalability, while also making it easier to debug and test individual parts of the codebase I have created smaller, focused Django applications within the project.</li>
+                                <br>
+                                <li><strong>Writing most of the functionality in Django models or utility files instead of views</strong> to enhance application performance, as they are loaded only once when the application starts up, thus reducing loading and processing costs.</li>
+                                <br>
+                                <li>To ensure sensitive information is kept secure, we store API keys, database passwords, and other credentials in <strong>environment variables</strong>. </li>
+                                <br>
+                                <li>In Django, we can optimize tests by <strong>utilizing the setUp</strong> method to handle expensive setup operations for all tests within a module, which saves time and resources, and makes our tests more reliable. </li>
+                                <br>
+                                <li><strong>The page object pattern</strong> follows the DRY principle, minimizing code duplication, and creates an interface between web page elements and tests, resulting in more robust tests and better test organization.</li>
+                            </ul>
+                        </td>
+                    </tbody>
+
+                </table>
+
+                
             </div><!-- end of container -->
         </section><!-- end of blog section -->
 </div>
