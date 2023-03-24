@@ -12237,6 +12237,14 @@ pre .code {
   position: relative;
   top: -45rem;
 }
+ .para-blog {
+  text-align: justify;
+  font-weight: normal;
+ }
+
+ .banner-img {
+  text-align: center;
+ }
 
 
 
