@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Discover Trend Direction for Financial Instruments with Stooq API - Powered by FastAPI and Python</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Meyawo landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Maciej Jaroszewski | Portfolio Website</title>
+    <meta name="description" content="Looking for a lightning-fast and user-friendly financial trend direction application? Check out our Stooq API page! Built with Python and FastAPI, our app uses Plotly to display trend direction for financial instruments in Stooq's database.">
+    <meta name="author" content="Maciej Jaroszewski">
+    <meta id="keywords" name="keywords" content="mjaroszewski, fast api, python, stooq, plotly, pandas-datareader" />
+    <meta property="og:site_name" content="https://mjaroszewski.website" />
+    <meta property="og:url" content="https://mjaroszewski.website/discover-trend-direction-for-financial-instruments-with-stooq-api-powered-by-fastapi-and-python.html" />
+    <meta property="og:title" content="Discover Trend Direction for Financial Instruments with Stooq API - Powered by FastAPI and Python" />
+    <meta property="og:description" content="Looking for a lightning-fast and user-friendly financial trend direction application? Check out our Stooq API page! Built with Python and FastAPI, our app uses Plotly to display trend direction for financial instruments in Stooq's database." />
+    <meta property="og:type" content="article" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@NatLife_quest" />
+    <meta name="twitter:url" content="https://mjaroszewski.website" />
+    <meta name="twitter:title" content="Discover Trend Direction for Financial Instruments with Stooq API - Powered by FastAPI and Python" />
+    <meta name="twitter:description" content="Looking for a lightning-fast and user-friendly financial trend direction application? Check out our Stooq API page! Built with Python and FastAPI, our app uses Plotly to display trend direction for financial instruments in Stooq's database." />
+    <meta name="twitter:image" content="https://mjaroszewski.website/assets/imgs/stooq-api.png" />
+    
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
@@ -62,19 +78,20 @@
         <section class="section" id="blog">
             <!-- container -->
             <div class="container text-center">
-                <p class="section-subtitle text-secondary"><strong>Flask Application</strong></p>
-                <h6 class="section-title mb-6 text-light">Market Bias</h6>
+                <p class="section-subtitle text-secondary"><strong>FastAPI Application</strong></p>
+                <h6 class="section-title mb-6 text-light">Stooq API</h6>
                 <!-- blog-wrapper -->
 
                 <div class="blog-card">
                     <div class="blog-card-header">
-                        <img src="assets/imgs/market-bias.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <img src="assets/imgs/stooq-api.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                     </div>
                     <div class="blog-card-body">
-                        <h5 class="blog-card-title">This application is built on Python and Flask, and it leverages the power of Pandas and Plotly to provide historical data of the S&P 500.</h6>
-                            <p><b>To do this, it uses the Pandas Datareader to connect to the Yahoo Finance API and apply various technical analysis tools. One of the standout features of this application is its interactive visualizations, which are made possible by Plotly. Users can easily view market bias and explore different trends. In addition, the website also offers a simple and profitable trading strategy known as Dual Momentum. The application also includes a table of various stock indices, grouped by their one-year rate of change. This table is updated daily and uses historical data sourced from Yahoo Finance API.
+                        <h5 class="blog-card-title">This app has one primary function: to display the current trend direction of financial instruments included in Stooq's database.</h6>
+                            <p><b>To achieve this, the user inputs their desired parameters, and the application accesses the historical data for those instruments. Once the data is accessed, the app calculates moving averages using three lookback periods: 50-day, 100-day, and 200-day. These moving averages provide a helpful indicator of the trend direction for each instrument.
+                                The beauty of FastAPI is that it is designed to be performant and easy to use. It's lightweight, so it can handle heavy loads without sacrificing speed. And its intuitive design means that developers can quickly create APIs with minimal code.
                         </b></p>
-                        <a href="https://github.com/mjaroszewski1979/market_bias_v2" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
+                        <a href="https://github.com/mjaroszewski1979/stooq-api" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
                     </div>
                 </div><!-- end of blog wrapper -->
                 <h2>Features:</h2>
@@ -83,19 +100,15 @@
                     <tbody>
                         <td>
                             <ul class="list-unstyled">
-                                <li><strong>CSS Flexbox</strong> simplifies complex layout structures by easily arranging and aligning items within a container. With its simplicity and compatibility with modern browsers, Flexbox is a popular tool for creating responsive layouts and reusable components, without the need for complicated CSS hacks.</li>
+                                <li>By <strong>using pandas-datareader to access Stooq's extensive database</strong> of historical stock prices, traders and investors can easily retrieve and analyze historical price data for any given share ticker symbol, allowing them to make informed decisions based on historical market trends and patterns. </li>
                                 <br>
-                                <li>To improve website performance, it's crucial to optimize loading times, which can be negatively affected by slow loading times and decreased search engine rankings. One way to improve performance is through <strong>HTML and CSS minification</strong>, a process that removes unnecessary characters from code to reduce file sizes, resulting in faster load times. </li>
+                                <li>The basic <strong>HTML landing/index page</strong> serves as the initial point of contact between the user and the application.</li>
                                 <br>
-                                <li>With a wide range of options and the ability to customize the size, color, and animations, <strong>Font Awesome</strong> icons can enhance the look of your design and add functionality.</li>
+                                <li>FastAPI provides <strong>interactive API documentation</strong> and exploration web user interfaces, making it easy for developers to understand available endpoints and request/response formats. </li>
                                 <br>
-                                <li><strong>CSS variables</strong> allow you to set values that can be reused throughout your CSS file, making it easier to update the look and feel of your website or application. By incorporating CSS custom variables, you can create a flexible and efficient design that is easy to update.</li>
+                                <li>The <strong>capability to return HTTP exceptions</strong> with a status code of 404 for non-existing symbols or tickers is an essential feature that prevents users from wasting time and effort searching for something that does not exist.</li>
                                 <br>
-                                <li>Optimizing the email sending function is crucial to ensure efficient and smooth running of your application. <strong>Moving the email sending function to a background thread</strong> can significantly reduce delays during request handling, improve overall performance, and enhance the user experience.</li>
-                                <br>
-                                <li>To ensure sensitive information is kept secure, we store API keys, database passwords, and other credentials in <strong>environment variables</strong>.</li>
-                                <br>
-                                <li>Flask <strong>blueprints</strong> allow for modular organization of your application, while the <strong>application factory pattern</strong> separates the creation of the application object from the rest of your codebase, allowing for easy configuration and management.</li>
+                                <li>This application includes powerful embedded <strong>interactive plotly visualizations charts</strong>, which provide an immersive and interactive user experience for exploring and analyzing financial data in real-time.</li>
                             </ul>
                         </td>
                     </tbody>

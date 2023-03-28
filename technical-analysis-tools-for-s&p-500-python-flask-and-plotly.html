@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Technical Analysis Tools for S&P 500: Python, Flask, and Plotly</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Meyawo landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Maciej Jaroszewski | Portfolio Website</title>
+    <meta name="description" content="Looking to make informed trading decisions in the stock market? Look no further than this Python and Flask-based application. Leveraging the power of Pandas and Plotly, this app uses technical analysis tools like Bollinger Bands, MACD, and RSI to provide historical data of the S&P 500, along with other stock indices. With interactive visualizations and a simple yet profitable trading strategy known as Dual Momentum, this app makes it easy to view market bias and explore different trends. Plus, users can receive a free Ebook by simply submitting the contact form.">
+    <meta name="author" content="Maciej Jaroszewski">
+    <meta id="keywords" name="keywords" content="mjaroszewski, flask, python, plotly, pandas-datareader, s&p 500, selenium" />
+    <meta property="og:site_name" content="https://mjaroszewski.website" />
+    <meta property="og:url" content="https://mjaroszewski.website/technical-analysis-tools-for-s&p-500-python-flask-and-plotly.html" />
+    <meta property="og:title" content="Technical Analysis Tools for S&P 500: Python, Flask, and Plotly" />
+    <meta property="og:description" content="Looking to make informed trading decisions in the stock market? Look no further than this Python and Flask-based application. Leveraging the power of Pandas and Plotly, this app uses technical analysis tools like Bollinger Bands, MACD, and RSI to provide historical data of the S&P 500, along with other stock indices. With interactive visualizations and a simple yet profitable trading strategy known as Dual Momentum, this app makes it easy to view market bias and explore different trends. Plus, users can receive a free Ebook by simply submitting the contact form." />
+    <meta property="og:type" content="article" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@NatLife_quest" />
+    <meta name="twitter:url" content="https://mjaroszewski.website" />
+    <meta name="twitter:title" content="Technical Analysis Tools for S&P 500: Python, Flask, and Plotly" />
+    <meta name="twitter:description" content="Looking to make informed trading decisions in the stock market? Look no further than this Python and Flask-based application. Leveraging the power of Pandas and Plotly, this app uses technical analysis tools like Bollinger Bands, MACD, and RSI to provide historical data of the S&P 500, along with other stock indices. With interactive visualizations and a simple yet profitable trading strategy known as Dual Momentum, this app makes it easy to view market bias and explore different trends. Plus, users can receive a free Ebook by simply submitting the contact form." />
+    <meta name="twitter:image" content="https://mjaroszewski.website/assets/imgs/market-bias.png" />
+    
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
@@ -62,19 +78,19 @@
         <section class="section" id="blog">
             <!-- container -->
             <div class="container text-center">
-                <p class="section-subtitle text-secondary"><strong>FastAPI Application</strong></p>
-                <h6 class="section-title mb-6 text-light">Dogs of Dow</h6>
+                <p class="section-subtitle text-secondary"><strong>Flask Application</strong></p>
+                <h6 class="section-title mb-6 text-light">Market Bias</h6>
                 <!-- blog-wrapper -->
 
                 <div class="blog-card">
                     <div class="blog-card-header">
-                        <img src="assets/imgs/dogs-of-dow.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <img src="assets/imgs/market-bias.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                     </div>
                     <div class="blog-card-body">
-                        <h5 class="blog-card-title">This is an application build with one of the fastest Python web frameworks - FastAPI. </h5>
-                            <p><b>In fact, its speed is at par with Node.js and Go, it also creates plugins easily using dependency injection. The main function is to display current trend direction for 10 best high-yield dividend members of the Dow Jones Industrial Index included in Yahoo Finance's database. After receiving user input, application is gaining access to particular stock historical data by utilizing pandas-datareader. 
+                        <h5 class="blog-card-title">This application is built on Python and Flask, and it leverages the power of Pandas and Plotly to provide historical data of the S&P 500.</h6>
+                            <p><b>To do this, it uses the Pandas Datareader to connect to the Yahoo Finance API and apply various technical analysis tools. One of the standout features of this application is its interactive visualizations, which are made possible by Plotly. Users can easily view market bias and explore different trends. In addition, the website also offers a simple and profitable trading strategy known as Dual Momentum. The application also includes a table of various stock indices, grouped by their one-year rate of change. This table is updated daily and uses historical data sourced from Yahoo Finance API.
                         </b></p>
-                        <a href="https://github.com/mjaroszewski1979/dogs_of_dow_v1" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
+                        <a href="https://github.com/mjaroszewski1979/market_bias_v2" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
                     </div>
                 </div><!-- end of blog wrapper -->
                 <h2>Features:</h2>
@@ -91,11 +107,11 @@
                                 <br>
                                 <li><strong>CSS variables</strong> allow you to set values that can be reused throughout your CSS file, making it easier to update the look and feel of your website or application. By incorporating CSS custom variables, you can create a flexible and efficient design that is easy to update.</li>
                                 <br>
-                                <li>Implementing <strong>Jinja2 extensible templating engine for automatic HTML escaping</strong> to prevent cross-site scripting (XSS) attacks.</li>
+                                <li>Optimizing the email sending function is crucial to ensure efficient and smooth running of your application. <strong>Moving the email sending function to a background thread</strong> can significantly reduce delays during request handling, improve overall performance, and enhance the user experience.</li>
                                 <br>
-                                <li><strong>Moving the fetching data function to a background thread</strong> to avoid unnecessary delays during request handling.</li>
+                                <li>To ensure sensitive information is kept secure, we store API keys, database passwords, and other credentials in <strong>environment variables</strong>.</li>
                                 <br>
-                                <li>To handle password hashing and checking, <strong>Werkzeug Security</strong> offers a set of functions that can be used in a password-based authentication system.</li>
+                                <li>Flask <strong>blueprints</strong> allow for modular organization of your application, while the <strong>application factory pattern</strong> separates the creation of the application object from the rest of your codebase, allowing for easy configuration and management.</li>
                             </ul>
                         </td>
                     </tbody>

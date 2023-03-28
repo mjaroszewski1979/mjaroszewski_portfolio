@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Find Dow Jones Dividend Trends with Python's FastAPI and Yahoo Finance</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Meyawo landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Maciej Jaroszewski | Portfolio Website</title>
+    <meta name="description" content="Looking for the latest trends in high-yield dividend stocks from the Dow Jones Industrial Index? Look no further than this FastAPI-powered application. With lightning-fast speeds comparable to Node.js and Go, this application utilizes the powerful pandas-datareader library to access historical stock data for the top 10 high-yield dividend members of the Dow Jones. And with built-in data validation and password hashing functionality, you can be sure that your data is secure. Check out this website for all your dividend stock analysis needs!">
+    <meta name="author" content="Maciej Jaroszewski">
+    <meta id="keywords" name="keywords" content="mjaroszewski, python, fast api, pandas-datareader, yahoo finance, dow jones" />
+    <meta property="og:site_name" content="https://mjaroszewski.website" />
+    <meta property="og:url" content="https://mjaroszewski.website/find-dow-jones-dividend-trends-with-pythons-fastapi-and-yahoo-finance.html" />
+    <meta property="og:title" content="Find Dow Jones Dividend Trends with Python's FastAPI and Yahoo Finance" />
+    <meta property="og:description" content="Looking for the latest trends in high-yield dividend stocks from the Dow Jones Industrial Index? Look no further than this FastAPI-powered application. With lightning-fast speeds comparable to Node.js and Go, this application utilizes the powerful pandas-datareader library to access historical stock data for the top 10 high-yield dividend members of the Dow Jones. And with built-in data validation and password hashing functionality, you can be sure that your data is secure. Check out this website for all your dividend stock analysis needs!" />
+    <meta property="og:type" content="article" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@NatLife_quest" />
+    <meta name="twitter:url" content="https://mjaroszewski.website" />
+    <meta name="twitter:title" content="Find Dow Jones Dividend Trends with Python's FastAPI and Yahoo Finance" />
+    <meta name="twitter:description" content="Looking for the latest trends in high-yield dividend stocks from the Dow Jones Industrial Index? Look no further than this FastAPI-powered application. With lightning-fast speeds comparable to Node.js and Go, this application utilizes the powerful pandas-datareader library to access historical stock data for the top 10 high-yield dividend members of the Dow Jones. And with built-in data validation and password hashing functionality, you can be sure that your data is secure. Check out this website for all your dividend stock analysis needs!" />
+    <meta name="twitter:image" content="https://mjaroszewski.website/assets/imgs/dogs-of-dow.png" />
+    
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
@@ -62,20 +78,19 @@
         <section class="section" id="blog">
             <!-- container -->
             <div class="container text-center">
-                <p class="section-subtitle text-secondary"><strong>Flask Application</strong></p>
-                <h6 class="section-title mb-6 text-light">Trend Follower</h6>
+                <p class="section-subtitle text-secondary"><strong>FastAPI Application</strong></p>
+                <h6 class="section-title mb-6 text-light">Dogs of Dow</h6>
                 <!-- blog-wrapper -->
 
                 <div class="blog-card">
                     <div class="blog-card-header">
-                        <img src="assets/imgs/trend-follower.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <img src="assets/imgs/dogs-of-dow.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                     </div>
                     <div class="blog-card-body">
-                        <h5 class="blog-card-title">This is a Python application powered by Flask-Login to provide user session management.</h6>
-                            <p><b>Its main function is to present current direction for selected financial markets. After completing the registration process users are gaining access to multiple instruments. This website is using pandas-datareader to fetch historical data from FRED. Before results are being displayed application is calculating very simple 12-month momentum formula to determine actual trend.
-                                One of the most noteworthy features of this application is a highly adaptable and scalable workflow for structuring and configuring a production-grade structure using flask blueprints and the application factory pattern.
+                        <h5 class="blog-card-title">This is an application build with one of the fastest Python web frameworks - FastAPI. </h5>
+                            <p><b>In fact, its speed is at par with Node.js and Go, it also creates plugins easily using dependency injection. The main function is to display current trend direction for 10 best high-yield dividend members of the Dow Jones Industrial Index included in Yahoo Finance's database. After receiving user input, application is gaining access to particular stock historical data by utilizing pandas-datareader. 
                         </b></p>
-                        <a href="https://github.com/mjaroszewski1979/trend_follower_v1" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
+                        <a href="https://github.com/mjaroszewski1979/dogs_of_dow_v1" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
                     </div>
                 </div><!-- end of blog wrapper -->
                 <h2>Features:</h2>
@@ -92,13 +107,11 @@
                                 <br>
                                 <li><strong>CSS variables</strong> allow you to set values that can be reused throughout your CSS file, making it easier to update the look and feel of your website or application. By incorporating CSS custom variables, you can create a flexible and efficient design that is easy to update.</li>
                                 <br>
-                                <li>Using <strong>login_user function</strong> to create a session that will persist as the user stays logged in, which will allow to view protected pages.</li>
+                                <li>Implementing <strong>Jinja2 extensible templating engine for automatic HTML escaping</strong> to prevent cross-site scripting (XSS) attacks.</li>
                                 <br>
-                                <li>The <strong>SQLAlchemy Object Relational Mapper</strong> to associate user-defined Python classes with database tables.</li>
+                                <li><strong>Moving the fetching data function to a background thread</strong> to avoid unnecessary delays during request handling.</li>
                                 <br>
-                                <li><strong>Flashing error messages</strong> back to users when something goes wrong.</li>
-                                <br>
-                                <li>A highly adaptable and scalable workflow for structuring and configuring a production-grade flask application <strong>using flask blueprints and the application factory pattern.</strong></li>
+                                <li>To handle password hashing and checking, <strong>Werkzeug Security</strong> offers a set of functions that can be used in a password-based authentication system.</li>
                             </ul>
                         </td>
                     </tbody>
