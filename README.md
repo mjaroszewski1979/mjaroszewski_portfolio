@@ -14,6 +14,8 @@
  * Sitemap: Provides valuable information for search engines.
  * HTML Meta Tags: Crucial for site SEO performance.
  * Google-site-verification file: Verifies ownership of a website domain.
+ * ChatGPT: Utilizing generative AI to assist in targeting important keywords.
+ * Social Media Meta Properties: Influences the appearance of shared blog posts.
 
 ### Usage
 To explore the projects and features, clone the repository and open the index.html file in your browser.
