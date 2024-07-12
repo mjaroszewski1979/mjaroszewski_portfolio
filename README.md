@@ -33,9 +33,21 @@ Ensure compatibility across different devices and browsers. Verify form submissi
 * SCSS
 * JavaScript
 
+### Contributing
+Contributions are welcome! Please fork the repository, create a new branch for your feature or bug fix, and submit a pull request.
+* Fork the repository
+* Create a new branch (git checkout -b feature/your-feature)
+* Commit your changes (git commit -m 'Add some feature')
+* Push to the branch (git push origin feature/your-feature)
+* Open a pull request
 
- ![caption](https://github.com/mjaroszewski1979/mjaroszewski_portfolio/blob/main/mjportfolio_mockup.png)
+### Contact
+For questions or feedback, please contact [mjaroszewski1979.](https://github.com/mjaroszewski1979)
+
+-------------------------------------------
+
+ ![caption](https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/mjaroszewski-website-mockup.png)
 
   Live | Code | Technologies
   ---- | ---- | ------------
-  [<img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/netlify1.png">](https://mjaroszewski.site/) | [<img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/github_g.png">](https://github.com/mjaroszewski1979/mjaroszewski_portfolio) | <img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/html_g.png"> &nbsp; <img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/css_g.png"> &nbsp; &nbsp; <img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/js1.png" > &nbsp; &nbsp; &nbsp; <img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/htmlup.png" >
+  [<img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/netlify1.png">](https://mjaroszewski.site/) | [<img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/github_g.png">](https://github.com/mjaroszewski1979/mjaroszewski_portfolio) | <img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/html_g.png"> &nbsp; <img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/css_g.png"> &nbsp; &nbsp; <img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/js1.png" > &nbsp; &nbsp; <img src="https://github.com/mjaroszewski1979/mjaroszewski1979/blob/main/midjourney_g.png" > 
