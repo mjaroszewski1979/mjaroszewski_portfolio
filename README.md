@@ -16,6 +16,7 @@
  * Google-site-verification file: Verifies ownership of a website domain.
  * ChatGPT: Utilizing generative AI to assist in targeting important keywords.
  * Social Media Meta Properties: Influences the appearance of shared blog posts.
+ * Google Search Console: Storing, analyzing, and organizing the content and connections between pages.
 
 ### Usage
 To explore the projects and features, clone the repository and open the index.html file in your browser.
