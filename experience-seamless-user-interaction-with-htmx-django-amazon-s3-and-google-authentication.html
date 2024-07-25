@@ -87,42 +87,51 @@
                         <img src="assets/imgs/django-cars.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                     </div>
                     <div class="blog-card-body">
-                        <h5 class="blog-card-title">This Django application provides users the option to register and authenticate with their Google account.</h6>
-                            <p><b>Once successfully logged in, users can create a customized list of their favorite cars and even upload images of their choice. One of the most noteworthy features of this application is the implementation of drag-and-drop reordering, which enables users to dynamically alter the order of elements in their list, which is then automatically reflected in the database.
-                                he integration of HTMX technology into this Django application ensures that the user experience is smooth and seamless. HTMX is a modern tool that simplifies the development process by allowing developers to create interactive web pages with minimal effort.
+                        <h5 class="blog-card-title">This is a Django-based web application designed to provide users with a personalized and interactive experience in managing their favorite cars. </h6>
+                            <p><b>Upon visiting the application, users are offered the convenience of registering and authenticating through their Google accounts, thanks to the seamless integration of the django-allauth package. A highlight of MJ Cars is its dynamic list management capabilities. 
+                                Users can effortlessly reorder their list of favorite cars through an intuitive drag-and-drop interface. The application employs HTMX technology, a modern tool that significantly simplifies the development of highly interactive web pages. Project's documentation is automated using Sphinx-apidoc, which builds a well-organized module index with documentation links derived from docstrings. 
                         </b></p>
                         <a href="https://github.com/mjaroszewski1979/django_car" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
                     </div>
                 </div><!-- end of blog wrapper -->
-                <h2>Features:</h2>
+                <h2>Key Features:</h2>
 
                 <table class="table table-borderless v-align-center">
                     <tbody>
                         <td>
                             <ul class="list-unstyled">
-                                <li>Utilizing <strong>template inheritance mechanism</strong> to create a visually appealing and user-friendly interface. This involves building a base template with common elements and defining blocks that child templates can override, allowing for a consistent and easily modifiable design.</li>
+                                <li><strong>User Authentication</strong><br>
+                                    <br>
+                                    <p><b>Google OAuth Integration: </b>Users can register and log in using their Google accounts, facilitated by the django-allauth package. This simplifies the registration process and enhances security.</p>
+                                    <p><b>LoginRequiredMixin: </b>Ensures users must be authenticated to access certain pages, preventing unauthorized access and protecting user data.</p>
+
+                                </li>
                                 <br>
-                                <li><strong>HTMX</strong> is a user-friendly library that simplifies the creation of highly dynamic and interactive web applications without requiring the use of complex JavaScript or CSS frameworks.</li>
+                                <li><strong>Dynamic List Management</strong><br>
+                                    <br>
+                                    <p><b>Drag-and-Drop Reordering: </b>Allows users to dynamically reorder their list of favorite cars. Changes are immediately reflected in the database, enhancing user interaction and data management.</p>
+                                    <p><b>HTMX Integration: </b>Provides a seamless and interactive user experience without requiring complex JavaScript frameworks. Simplifies the development process and ensures smooth page updates.</p>
+                                </li>
                                 <br>
-                                <li>The <strong>LoginRequiredMixin</strong> is a Django security feature that requires users to authenticate themselves before accessing certain pages or functionalities. It helps prevent unauthorized access to sensitive information and ensures the security and privacy of the application and its users.</li>
+                                <li><strong>User-Friendly Interface</strong><br>
+                                    <br>
+                                    <p><b>Template Inheritance: </b>Utilizes Django's template inheritance mechanism to create a consistent and visually appealing design. A base template includes common elements, while child templates override specific blocks for a cohesive and easily modifiable interface.</p>
+                                </li>
                                 <br>
-                                <li>My Django application includes a key feature that allows users to upload and access media files securely through <strong>Amazon S3 bucket</strong>. By using Amazon S3, we ensure that all media files are stored safely, easily accessible, and can easily scale to meet the growing demands of the application's users.</li>
+                                <li><strong>Security Features</strong><br>
+                                    <br>
+                                    <p><b>CSRF Protection: </b>Django's built-in Cross-Site Request Forgery protection ensures secure form submissions, preventing malicious attacks.</p>
+                                    <p><b>Environment Variables: </b> Sensitive information such as API keys and database passwords are stored in environment variables, enhancing security.</p>
+                                </li>
                                 <br>
-                                <li>With the <strong>django-allauth</strong> package, users can log in and register using their social media accounts, like Google, simplifying the process and improving security.</li>
+                                <li><strong>Code Organization and Performance</strong><br>
+                                    <br>
+                                    <p><b>Modular Design: </b>Logic is divided into smaller Django applications within the project, improving code organization, maintainability, and scalability.</p>
+                                    <p><b>Efficient Code Execution: </b>Most functionality is implemented in Django models or utility files rather than views, reducing loading and processing costs.</p>
+                                    <p><b>Optimized Testing: </b>Utilizes the setUp method for handling expensive setup operations, saving time and resources, and improving test reliability.</p>
+                                    <p><b>Page Object Pattern: </b>Follows the DRY principle, creating an interface between web page elements and tests to minimize code duplication and enhance test robustness.</p>
+                                </li>
                                 <br>
-                                <li>Django's <strong>Cross-Site Request Forgery Protection</strong> works by using a unique token to validate each form submission on the server-side, and also includes other built-in security features like user authentication and authorization, password hashing, and SSL encryption to protect against common security threats.</li>
-                                <br>
-                                <li><strong>Sphinx-apidoc</strong> to automate the building of a well-organized module index with documentation links derived from docstrings, thus enhancing the user's experience. </li>
-                                <br>
-                                <li><strong>Breaking down logic into smaller parts</strong>: to achieve improved code organization, maintainability, and scalability, while also making it easier to debug and test individual parts of the codebase I have created smaller, focused Django applications within the project.</li>
-                                <br>
-                                <li><strong>Writing most of the functionality in Django models or utility files instead of views</strong> to enhance application performance, as they are loaded only once when the application starts up, thus reducing loading and processing costs.</li>
-                                <br>
-                                <li>To ensure sensitive information is kept secure, we store API keys, database passwords, and other credentials in <strong>environment variables</strong>. </li>
-                                <br>
-                                <li>In Django, we can optimize tests by <strong>utilizing the setUp</strong> method to handle expensive setup operations for all tests within a module, which saves time and resources, and makes our tests more reliable. </li>
-                                <br>
-                                <li><strong>The page object pattern</strong> follows the DRY principle, minimizing code duplication, and creates an interface between web page elements and tests, resulting in more robust tests and better test organization.</li>
                             </ul>
                         </td>
                     </tbody>
