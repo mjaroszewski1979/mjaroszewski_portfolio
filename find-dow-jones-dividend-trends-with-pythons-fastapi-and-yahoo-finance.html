@@ -1,173 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Find Dow Jones Dividend Trends with Python's FastAPI and Yahoo Finance</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Looking for the latest trends in high-yield dividend stocks from the Dow Jones Industrial Index? Look no further than this FastAPI-powered application. With lightning-fast speeds comparable to Node.js and Go, this application utilizes the powerful pandas-datareader library to access historical stock data for the top 10 high-yield dividend members of the Dow Jones. And with built-in data validation and password hashing functionality, you can be sure that your data is secure. Check out this website for all your dividend stock analysis needs!">
-    <meta name="author" content="Maciej Jaroszewski">
-    <meta id="keywords" name="keywords" content="mjaroszewski, python, fast api, pandas-datareader, yahoo finance, dow jones" />
+  <head>
+    <title>
+      Find Dow Jones Dividend Trends with Python's FastAPI and Yahoo Finance
+    </title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Looking for the latest trends in high-yield dividend stocks from the Dow Jones Industrial Index? Look no further than this FastAPI-powered application. With lightning-fast speeds comparable to Node.js and Go, this application utilizes the powerful pandas-datareader library to access historical stock data for the top 10 high-yield dividend members of the Dow Jones. And with built-in data validation and password hashing functionality, you can be sure that your data is secure. Check out this website for all your dividend stock analysis needs!"
+    />
+    <meta name="author" content="Maciej Jaroszewski" />
+    <meta
+      id="keywords"
+      name="keywords"
+      content="mjaroszewski, python, fast api, pandas-datareader, yahoo finance, dow jones"
+    />
     <meta property="og:site_name" content="https://mjaroszewski.website" />
-    <meta property="og:url" content="https://mjaroszewski.website/find-dow-jones-dividend-trends-with-pythons-fastapi-and-yahoo-finance.html" />
-    <meta property="og:title" content="Find Dow Jones Dividend Trends with Python's FastAPI and Yahoo Finance" />
-    <meta property="og:description" content="Looking for the latest trends in high-yield dividend stocks from the Dow Jones Industrial Index? Look no further than this FastAPI-powered application. With lightning-fast speeds comparable to Node.js and Go, this application utilizes the powerful pandas-datareader library to access historical stock data for the top 10 high-yield dividend members of the Dow Jones. And with built-in data validation and password hashing functionality, you can be sure that your data is secure. Check out this website for all your dividend stock analysis needs!" />
+    <meta
+      property="og:url"
+      content="https://mjaroszewski.website/find-dow-jones-dividend-trends-with-pythons-fastapi-and-yahoo-finance.html"
+    />
+    <meta
+      property="og:title"
+      content="Find Dow Jones Dividend Trends with Python's FastAPI and Yahoo Finance"
+    />
+    <meta
+      property="og:description"
+      content="Looking for the latest trends in high-yield dividend stocks from the Dow Jones Industrial Index? Look no further than this FastAPI-powered application. With lightning-fast speeds comparable to Node.js and Go, this application utilizes the powerful pandas-datareader library to access historical stock data for the top 10 high-yield dividend members of the Dow Jones. And with built-in data validation and password hashing functionality, you can be sure that your data is secure. Check out this website for all your dividend stock analysis needs!"
+    />
     <meta property="og:type" content="article" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@NatLife_quest" />
     <meta name="twitter:url" content="https://mjaroszewski.website" />
-    <meta name="twitter:title" content="Find Dow Jones Dividend Trends with Python's FastAPI and Yahoo Finance" />
-    <meta name="twitter:description" content="Looking for the latest trends in high-yield dividend stocks from the Dow Jones Industrial Index? Look no further than this FastAPI-powered application. With lightning-fast speeds comparable to Node.js and Go, this application utilizes the powerful pandas-datareader library to access historical stock data for the top 10 high-yield dividend members of the Dow Jones. And with built-in data validation and password hashing functionality, you can be sure that your data is secure. Check out this website for all your dividend stock analysis needs!" />
-    <meta name="twitter:image" content="https://mjaroszewski.website/assets/imgs/dogs-of-dow.png" />
-    
+    <meta
+      name="twitter:title"
+      content="Find Dow Jones Dividend Trends with Python's FastAPI and Yahoo Finance"
+    />
+    <meta
+      name="twitter:description"
+      content="Looking for the latest trends in high-yield dividend stocks from the Dow Jones Industrial Index? Look no further than this FastAPI-powered application. With lightning-fast speeds comparable to Node.js and Go, this application utilizes the powerful pandas-datareader library to access historical stock data for the top 10 high-yield dividend members of the Dow Jones. And with built-in data validation and password hashing functionality, you can be sure that your data is secure. Check out this website for all your dividend stock analysis needs!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://mjaroszewski.website/assets/imgs/dogs-of-dow.png"
+    />
+
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
     <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link
+      rel="stylesheet"
+      href="assets/vendors/themify-icons/css/themify-icons.css"
+    />
     <!-- Bootstrap + Meyawo main styles -->
-	<link rel="stylesheet" href="assets/css/meyawo.css">
-    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
-</head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-
+    <link rel="stylesheet" href="assets/css/meyawo.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/imgs/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon" />
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
-        <div class="container">
-            <a class="logo" href="index.html">Mjaroszewski</a>         
-            <ul class="nav">
-                <li class="item">
-                    <a class="link" href="index.html">Home</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#about">About</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#portfolio">Portfolio</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#testmonial">Stack</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#blog">Blog</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#contact">Contact</a>
-                </li>
-                <li class="item ml-md-3">
-                    <a href="https://github.com/mjaroszewski1979" class="btn btn-primary" target="_blank">Projects</a>
-                </li>
-            </ul>
-            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
-                </div>
-            </a>
-        </div>          
-    </nav><!-- End of Page Navbar -->
+      <div class="container">
+        <a class="logo" href="index.html">Mjaroszewski</a>
+        <ul class="nav">
+          <li class="item">
+            <a class="link" href="index.html">Home</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#about">About</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#portfolio">Portfolio</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#testmonial">Stack</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#blog">Blog</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#contact">Contact</a>
+          </li>
+          <li class="item ml-md-3">
+            <a
+              href="https://github.com/mjaroszewski1979"
+              class="btn btn-primary"
+              target="_blank"
+              >Projects</a
+            >
+          </li>
+        </ul>
+        <a
+          href="javascript:void(0)"
+          id="nav-toggle"
+          class="hamburger hamburger--elastic"
+        >
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+      </div>
+    </nav>
+    <!-- End of Page Navbar -->
 
-    <header id="home" class="header" style="background-image: url('assets/imgs/header-alt.jpg');">
-        <div class="overlay"></div>
-        <div class="header-content container">
-        </div>              
-    </header><!-- end of page header -->
+    <header
+      id="home"
+      class="header"
+      style="background-image: url('assets/imgs/header-alt.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="header-content container"></div>
+    </header>
+    <!-- end of page header -->
 
-    
-<div class="container-recent-works">
-        <!-- blog section -->
-        <section class="section" id="blog">
-            <!-- container -->
-            <div class="container text-center">
-                <p class="section-subtitle text-secondary"><strong>FastAPI Application</strong></p>
-                <h6 class="section-title mb-6 text-light">Dogs of Dow</h6>
-                <!-- blog-wrapper -->
+    <div class="container-recent-works">
+      <!-- blog section -->
+      <section class="section" id="blog">
+        <!-- container -->
+        <div class="container text-center">
+          <p class="section-subtitle text-secondary">
+            <strong>FastAPI Application</strong>
+          </p>
+          <h6 class="section-title mb-6 text-light">Dogs of Dow</h6>
+          <!-- blog-wrapper -->
 
-                <div class="blog-card">
-                    <div class="blog-card-header">
-                        <img src="assets/imgs/dogs-of-dow.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="blog-card-body">
-                        <h5 class="blog-card-title">This is a high-performance web application built with FastAPI, one of the fastest Python web frameworks, known for its speed comparable to Node.js and Go.</h5>
-                            <p><b>The primary function of this application is to display the current trend direction for the top 10 high-yield dividend members of the Dow Jones Industrial Index, as included in Yahoo Finance's database. 
-                                After receiving user input, the application utilizes Pandas Datareader to access historical stock data, analyze trends, and provide recommendations. It presents analyzed data in an easy-to-understand format, helping users make informed investment decisions.
-                        </b></p>
-                        <a href="https://github.com/mjaroszewski1979/dogs_of_dow_v1" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
-                    </div>
-                </div><!-- end of blog wrapper -->
-                <h2>Key Features:</h2>
+          <div class="blog-card">
+            <div class="blog-card-header">
+              <img
+                src="assets/imgs/dogs-of-dow.png"
+                class="blog-card-img"
+                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+              />
+            </div>
+            <div class="blog-card-body">
+              <h5 class="blog-card-title">
+                This is a high-performance web application built with FastAPI,
+                one of the fastest Python web frameworks, known for its speed
+                comparable to Node.js and Go.
+              </h5>
+              <p>
+                <b
+                  >The primary function of this application is to display the
+                  current trend direction for the top 10 high-yield dividend
+                  members of the Dow Jones Industrial Index, as included in
+                  Yahoo Finance's database. After receiving user input, the
+                  application utilizes Pandas Datareader to access historical
+                  stock data, analyze trends, and provide recommendations. It
+                  presents analyzed data in an easy-to-understand format,
+                  helping users make informed investment decisions.
+                </b>
+              </p>
+              <a
+                href="https://github.com/mjaroszewski1979/dogs_of_dow_v1"
+                class="blog-card-link"
+                target="_blank"
+                ><button class="btn btn-info rounded btn-sm">
+                  View Github Readme
+                </button></a
+              >
+            </div>
+          </div>
+          <!-- end of blog wrapper -->
+          <h2>Key Features:</h2>
 
-                <table class="table table-borderless v-align-center">
-                    <tbody>
-                        <td>
-                            <ul class="list-unstyled">
-                                <li><strong>FastAPI Framework</strong><br>
-                                    <br>
-                                    <p><b>Speed and Efficiency: </b>Built with FastAPI, ensuring high performance and speed comparable to Node.js and Go. FastAPI allows for rapid development and efficient execution.</p>
-                                    <p><b>Dependency Injection: </b>Facilitates the creation of plugins through an easy-to-use dependency injection system, enhancing modularity and scalability.</p>
-                                </li>
-                                <br>
-                                <li><strong>Data Validation and Conversion</strong><br>
-                                    <br>
-                                    <p><b>Path Operation Functions: </b>Ensures data integrity through well-defined request handlers, validating and converting data as necessary.</p>
-                                </li>
-                                <br>
-                                <li><strong>User Authentication</strong><br>
-                                    <br>
-                                    <p><b>HTTPBasicCredentials: </b>Implements a secure user authentication system using HTTPBasicCredentials to validate user credentials.</p>
-                                    <p><b>Password Hashing: </b>Utilizes Werkzeug Security for hashing passwords and verifying their correctness, enhancing security.</p>
-                                </li>
-                                <br>
-                                <li><strong>Error Handling</strong><br>
-                                    <br>
-                                    <p><b>HTTPException: </b>Employs FastAPI’s HTTPException to handle errors effectively, providing meaningful feedback to users in case of incorrect credentials or other issues.</p>
-                                </li>
-                                <br>
-                                <li><strong>Template Rendering</strong><br>
-                                    <br>
-                                    <p><b>Jinja2Templates: </b>Leverages Jinja2 for rendering dynamic HTML content, ensuring a seamless user experience with dynamic and responsive web pages.</p>
-                                </li>
-                                <br>
-                                <li><strong>Performance Optimization:</strong><br>
-                                    <br>
-                                    <p><b>HTML and CSS Minification: </b>Reduces webpage loading times by minifying HTML and CSS files, enhancing overall performance and user experience.</p>
-                                    <p><b>Background Data Fetching:  </b>Moves data fetching operations to a background thread, avoiding delays and ensuring smooth performance.</p>
-                                </li>
-                                <br>
-                            </ul>
-                        </td>
-                    </tbody>
-
-                </table>
-
-
-                
-            </div><!-- end of container -->
-        </section><!-- end of blog section -->
-</div>
+          <table class="table table-borderless v-align-center">
+            <tbody>
+              <td>
+                <ul class="list-unstyled">
+                  <li>
+                    <strong>FastAPI Framework</strong><br />
+                    <br />
+                    <p>
+                      <b>Speed and Efficiency: </b>Built with FastAPI, ensuring
+                      high performance and speed comparable to Node.js and Go.
+                      FastAPI allows for rapid development and efficient
+                      execution.
+                    </p>
+                    <p>
+                      <b>Dependency Injection: </b>Facilitates the creation of
+                      plugins through an easy-to-use dependency injection
+                      system, enhancing modularity and scalability.
+                    </p>
+                  </li>
+                  <br />
+                  <li>
+                    <strong>Data Validation and Conversion</strong><br />
+                    <br />
+                    <p>
+                      <b>Path Operation Functions: </b>Ensures data integrity
+                      through well-defined request handlers, validating and
+                      converting data as necessary.
+                    </p>
+                  </li>
+                  <br />
+                  <li>
+                    <strong>User Authentication</strong><br />
+                    <br />
+                    <p>
+                      <b>HTTPBasicCredentials: </b>Implements a secure user
+                      authentication system using HTTPBasicCredentials to
+                      validate user credentials.
+                    </p>
+                    <p>
+                      <b>Password Hashing: </b>Utilizes Werkzeug Security for
+                      hashing passwords and verifying their correctness,
+                      enhancing security.
+                    </p>
+                  </li>
+                  <br />
+                  <li>
+                    <strong>Error Handling</strong><br />
+                    <br />
+                    <p>
+                      <b>HTTPException: </b>Employs FastAPI’s HTTPException to
+                      handle errors effectively, providing meaningful feedback
+                      to users in case of incorrect credentials or other issues.
+                    </p>
+                  </li>
+                  <br />
+                  <li>
+                    <strong>Template Rendering</strong><br />
+                    <br />
+                    <p>
+                      <b>Jinja2Templates: </b>Leverages Jinja2 for rendering
+                      dynamic HTML content, ensuring a seamless user experience
+                      with dynamic and responsive web pages.
+                    </p>
+                  </li>
+                  <br />
+                  <li>
+                    <strong>Performance Optimization:</strong><br />
+                    <br />
+                    <p>
+                      <b>HTML and CSS Minification: </b>Reduces webpage loading
+                      times by minifying HTML and CSS files, enhancing overall
+                      performance and user experience.
+                    </p>
+                    <p>
+                      <b>Background Data Fetching: </b>Moves data fetching
+                      operations to a background thread, avoiding delays and
+                      ensuring smooth performance.
+                    </p>
+                  </li>
+                  <br />
+                </ul>
+              </td>
+            </tbody>
+          </table>
+        </div>
+        <!-- end of container -->
+      </section>
+      <!-- end of blog section -->
+    </div>
 
     <!-- footer -->
     <div class="container">
-        <footer class="footer">       
-            <p class="mb-0">Maciej Jaroszewski <script>document.write(new Date().getFullYear())</script> | <a href="sitemap.html">Sitemap</a></p>
-            <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="https://github.com/mjaroszewski1979" class="link" target="_blank"><i class="ti-github"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100058399907662" class="link" target="_blank"><i class="ti-facebook"></i></a>
-                <a href="mailto:mjaroszewski1979@gmail.com" class="link" target="_blank"><i class="ti-google"></i></a>
-                <a href="https://www.linkedin.com/in/mjaroszewski/" class="link" target="_blank"><i class="ti-linkedin"></i></a>
-                <a href="https://www.instagram.com/naturalife.quest/" class="link" target="_blank"><i class="ti-instagram"></i></a>
-            </div>
-        </footer>
-    </div> <!-- end of page footer -->
-	
-	<!-- core  -->
+      <footer class="footer">
+        <p class="mb-0">
+          Maciej Jaroszewski
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          | <a href="sitemap.html">Sitemap</a>
+        </p>
+        <div class="social-links text-right m-auto ml-sm-auto">
+          <a
+            href="https://github.com/mjaroszewski1979"
+            class="link"
+            target="_blank"
+            ><i class="ti-github"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100058399907662"
+            class="link"
+            target="_blank"
+            ><i class="ti-facebook"></i
+          ></a>
+          <a
+            href="mailto:mjaroszewski1979@gmail.com"
+            class="link"
+            target="_blank"
+            ><i class="ti-google"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/mjaroszewski/"
+            class="link"
+            target="_blank"
+            ><i class="ti-linkedin"></i
+          ></a>
+        </div>
+      </footer>
+    </div>
+    <!-- end of page footer -->
+
+    <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
     <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
-
-</body>
+  </body>
 </html>
