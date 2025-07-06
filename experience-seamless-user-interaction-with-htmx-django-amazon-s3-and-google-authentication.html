@@ -1,170 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Experience Seamless User Interaction with HTMX, Django, Amazon S3, and Google Authentication</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Create a personalized list of your favorite cars with this Django application featuring Python, HTMX, and Amazon S3 integration. Authenticate with your Google account, and upload images of your choice to enhance your list. Enjoy a smooth user experience with drag-and-drop reordering and HTMX technology, which simplifies development by enabling interactive web pages with minimal effort. HTMX's use of HTML and CSS generates dynamic updates on the server-side, making it an ideal choice for developers. ">
-    <meta name="author" content="Maciej Jaroszewski">
-    <meta id="keywords" name="keywords" content="mjaroszewski, django, python, HTMX, Amazon S3, Selenium" />
+  <head>
+    <title>
+      Experience Seamless User Interaction with HTMX, Django, Amazon S3, and
+      Google Authentication
+    </title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Create a personalized list of your favorite cars with this Django application featuring Python, HTMX, and Amazon S3 integration. Authenticate with your Google account, and upload images of your choice to enhance your list. Enjoy a smooth user experience with drag-and-drop reordering and HTMX technology, which simplifies development by enabling interactive web pages with minimal effort. HTMX's use of HTML and CSS generates dynamic updates on the server-side, making it an ideal choice for developers. "
+    />
+    <meta name="author" content="Maciej Jaroszewski" />
+    <meta
+      id="keywords"
+      name="keywords"
+      content="mjaroszewski, django, python, HTMX, Amazon S3, Selenium"
+    />
     <meta property="og:site_name" content="https://mjaroszewski.website" />
-    <meta property="og:url" content="https://mjaroszewski.website/experience-seamless-user-interaction-with-htmx-django-amazon-s3-and-google-authentication.html" />
-    <meta property="og:title" content="Experience Seamless User Interaction with HTMX, Django, Amazon S3, and Google Authentication" />
-    <meta property="og:description" content="Create a personalized list of your favorite cars with this Django application featuring Python, HTMX, and Amazon S3 integration. Authenticate with your Google account, and upload images of your choice to enhance your list. Enjoy a smooth user experience with drag-and-drop reordering and HTMX technology, which simplifies development by enabling interactive web pages with minimal effort. HTMX's use of HTML and CSS generates dynamic updates on the server-side, making it an ideal choice for developers. " />
+    <meta
+      property="og:url"
+      content="https://mjaroszewski.website/experience-seamless-user-interaction-with-htmx-django-amazon-s3-and-google-authentication.html"
+    />
+    <meta
+      property="og:title"
+      content="Experience Seamless User Interaction with HTMX, Django, Amazon S3, and Google Authentication"
+    />
+    <meta
+      property="og:description"
+      content="Create a personalized list of your favorite cars with this Django application featuring Python, HTMX, and Amazon S3 integration. Authenticate with your Google account, and upload images of your choice to enhance your list. Enjoy a smooth user experience with drag-and-drop reordering and HTMX technology, which simplifies development by enabling interactive web pages with minimal effort. HTMX's use of HTML and CSS generates dynamic updates on the server-side, making it an ideal choice for developers. "
+    />
     <meta property="og:type" content="article" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@NatLife_quest" />
     <meta name="twitter:url" content="https://mjaroszewski.website" />
-    <meta name="twitter:title" content="Experience Seamless User Interaction with HTMX, Django, Amazon S3, and Google Authentication" />
-    <meta name="twitter:description" content="Create a personalized list of your favorite cars with this Django application featuring Python, HTMX, and Amazon S3 integration. Authenticate with your Google account, and upload images of your choice to enhance your list. Enjoy a smooth user experience with drag-and-drop reordering and HTMX technology, which simplifies development by enabling interactive web pages with minimal effort. HTMX's use of HTML and CSS generates dynamic updates on the server-side, making it an ideal choice for developers. " />
-    <meta name="twitter:image" content="https://mjaroszewski.website/assets/imgs/django-cars.png" />
-    
+    <meta
+      name="twitter:title"
+      content="Experience Seamless User Interaction with HTMX, Django, Amazon S3, and Google Authentication"
+    />
+    <meta
+      name="twitter:description"
+      content="Create a personalized list of your favorite cars with this Django application featuring Python, HTMX, and Amazon S3 integration. Authenticate with your Google account, and upload images of your choice to enhance your list. Enjoy a smooth user experience with drag-and-drop reordering and HTMX technology, which simplifies development by enabling interactive web pages with minimal effort. HTMX's use of HTML and CSS generates dynamic updates on the server-side, making it an ideal choice for developers. "
+    />
+    <meta
+      name="twitter:image"
+      content="https://mjaroszewski.website/assets/imgs/django-cars.png"
+    />
+
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
     <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link
+      rel="stylesheet"
+      href="assets/vendors/themify-icons/css/themify-icons.css"
+    />
     <!-- Bootstrap + Meyawo main styles -->
-	<link rel="stylesheet" href="assets/css/meyawo.css">
-    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
-</head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-
+    <link rel="stylesheet" href="assets/css/meyawo.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/imgs/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon" />
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
-        <div class="container">
-            <a class="logo" href="index.html">Mjaroszewski</a>         
-            <ul class="nav">
-                <li class="item">
-                    <a class="link" href="index.html">Home</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#about">About</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#portfolio">Portfolio</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#testmonial">Stack</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#blog">Blog</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="index.html#contact">Contact</a>
-                </li>
-                <li class="item ml-md-3">
-                    <a href="https://github.com/mjaroszewski1979" class="btn btn-primary" target="_blank">Projects</a>
-                </li>
-            </ul>
-            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
-                </div>
-            </a>
-        </div>          
-    </nav><!-- End of Page Navbar -->
-
-    <header id="home" class="header" style="background-image: url('assets/imgs/header-alt.jpg');">
-        <div class="overlay"></div>
-        <div class="header-content container">
-        </div>              
-    </header><!-- end of page header -->
-
-    
-<div class="container-recent-works">
-        <!-- blog section -->
-        <section class="section" id="blog">
-            <!-- container -->
-            <div class="container text-center">
-                <p class="section-subtitle text-secondary"><strong>Django Application</strong></p>
-                <h6 class="section-title mb-6 text-light">MJ Cars</h6>
-                <!-- blog-wrapper -->
-
-                <div class="blog-card">
-                    <div class="blog-card-header">
-                        <img src="assets/imgs/django-cars.png" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="blog-card-body">
-                        <h5 class="blog-card-title">This is a Django-based web application designed to provide users with a personalized and interactive experience in managing their favorite cars. </h6>
-                            <p><b>Upon visiting the application, users are offered the convenience of registering and authenticating through their Google accounts, thanks to the seamless integration of the django-allauth package. A highlight of MJ Cars is its dynamic list management capabilities. 
-                                Users can effortlessly reorder their list of favorite cars through an intuitive drag-and-drop interface. The application employs HTMX technology, a modern tool that significantly simplifies the development of highly interactive web pages. Project's documentation is automated using Sphinx-apidoc, which builds a well-organized module index with documentation links derived from docstrings. 
-                        </b></p>
-                        <a href="https://github.com/mjaroszewski1979/django_car" class="blog-card-link" target="_blank"><button class="btn btn-info rounded btn-sm">View Github Readme</button></a>
-                    </div>
-                </div><!-- end of blog wrapper -->
-                <h2>Key Features:</h2>
-
-                <table class="table table-borderless v-align-center">
-                    <tbody>
-                        <td>
-                            <ul class="list-unstyled">
-                                <li><strong>User Authentication</strong><br>
-                                    <br>
-                                    <p><b>Google OAuth Integration: </b>Users can register and log in using their Google accounts, facilitated by the django-allauth package. This simplifies the registration process and enhances security.</p>
-                                    <p><b>LoginRequiredMixin: </b>Ensures users must be authenticated to access certain pages, preventing unauthorized access and protecting user data.</p>
-
-                                </li>
-                                <br>
-                                <li><strong>Dynamic List Management</strong><br>
-                                    <br>
-                                    <p><b>Drag-and-Drop Reordering: </b>Allows users to dynamically reorder their list of favorite cars. Changes are immediately reflected in the database, enhancing user interaction and data management.</p>
-                                    <p><b>HTMX Integration: </b>Provides a seamless and interactive user experience without requiring complex JavaScript frameworks. Simplifies the development process and ensures smooth page updates.</p>
-                                </li>
-                                <br>
-                                <li><strong>User-Friendly Interface</strong><br>
-                                    <br>
-                                    <p><b>Template Inheritance: </b>Utilizes Django's template inheritance mechanism to create a consistent and visually appealing design. A base template includes common elements, while child templates override specific blocks for a cohesive and easily modifiable interface.</p>
-                                </li>
-                                <br>
-                                <li><strong>Security Features</strong><br>
-                                    <br>
-                                    <p><b>CSRF Protection: </b>Django's built-in Cross-Site Request Forgery protection ensures secure form submissions, preventing malicious attacks.</p>
-                                    <p><b>Environment Variables: </b> Sensitive information such as API keys and database passwords are stored in environment variables, enhancing security.</p>
-                                </li>
-                                <br>
-                                <li><strong>Code Organization and Performance</strong><br>
-                                    <br>
-                                    <p><b>Modular Design: </b>Logic is divided into smaller Django applications within the project, improving code organization, maintainability, and scalability.</p>
-                                    <p><b>Efficient Code Execution: </b>Most functionality is implemented in Django models or utility files rather than views, reducing loading and processing costs.</p>
-                                    <p><b>Optimized Testing: </b>Utilizes the setUp method for handling expensive setup operations, saving time and resources, and improving test reliability.</p>
-                                    <p><b>Page Object Pattern: </b>Follows the DRY principle, creating an interface between web page elements and tests to minimize code duplication and enhance test robustness.</p>
-                                </li>
-                                <br>
-                            </ul>
-                        </td>
-                    </tbody>
-
-                </table>
-
-                
-            </div><!-- end of container -->
-        </section><!-- end of blog section -->
-</div>
-
-      <!-- footer -->
       <div class="container">
-        <footer class="footer">       
-            <p class="mb-0">Maciej Jaroszewski <script>document.write(new Date().getFullYear())</script> | <a href="sitemap.html">Sitemap</a></p>
-            <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="https://github.com/mjaroszewski1979" class="link" target="_blank"><i class="ti-github"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100058399907662" class="link" target="_blank"><i class="ti-facebook"></i></a>
-                <a href="mailto:mjaroszewski1979@gmail.com" class="link" target="_blank"><i class="ti-google"></i></a>
-                <a href="https://www.linkedin.com/in/mjaroszewski/" class="link" target="_blank"><i class="ti-linkedin"></i></a>
+        <a class="logo" href="index.html">Mjaroszewski</a>
+        <ul class="nav">
+          <li class="item">
+            <a class="link" href="index.html">Home</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#about">About</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#portfolio">Portfolio</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#testmonial">Stack</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#blog">Blog</a>
+          </li>
+          <li class="item">
+            <a class="link" href="index.html#contact">Contact</a>
+          </li>
+          <li class="item ml-md-3">
+            <a
+              href="https://github.com/mjaroszewski1979"
+              class="btn btn-primary"
+              target="_blank"
+              >Projects</a
+            >
+          </li>
+        </ul>
+        <a
+          href="javascript:void(0)"
+          id="nav-toggle"
+          class="hamburger hamburger--elastic"
+        >
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </a>
+      </div>
+    </nav>
+    <!-- End of Page Navbar -->
+
+    <header
+      id="home"
+      class="header"
+      style="background-image: url('assets/imgs/header-alt.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="header-content container"></div>
+    </header>
+    <!-- end of page header -->
+
+    <div class="container-recent-works">
+      <!-- blog section -->
+      <section class="section" id="blog">
+        <!-- container -->
+        <div class="container text-center">
+          <p class="section-subtitle text-secondary">
+            <strong>Django Application</strong>
+          </p>
+          <h6 class="section-title mb-6 text-light">MJ Cars</h6>
+          <!-- blog-wrapper -->
+
+          <div class="blog-card">
+            <div class="blog-card-header">
+              <img
+                src="assets/imgs/django-cars.png"
+                class="blog-card-img"
+                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+              />
             </div>
-        </footer>
-    </div> <!-- end of page footer -->
-	
-	<!-- core  -->
+            <div class="blog-card-body">
+              <h6 class="blog-card-title">
+                This is a Django-based web application designed to provide users
+                with a personalized and interactive experience in managing their
+                favorite cars.
+              </h6>
+              <p>
+                <b
+                  >Upon visiting the application, users are offered the
+                  convenience of registering and authenticating through their
+                  Google accounts, thanks to the seamless integration of the
+                  django-allauth package. A highlight of MJ Cars is its dynamic
+                  list management capabilities. Users can effortlessly reorder
+                  their list of favorite cars through an intuitive drag-and-drop
+                  interface. The application employs HTMX technology, a modern
+                  tool that significantly simplifies the development of highly
+                  interactive web pages. Project's documentation is automated
+                  using Sphinx-apidoc, which builds a well-organized module
+                  index with documentation links derived from docstrings.
+                </b>
+              </p>
+              <a
+                href="https://github.com/mjaroszewski1979/django_car"
+                class="blog-card-link"
+                target="_blank"
+                ><button class="btn btn-info rounded btn-sm">
+                  View Github Readme
+                </button></a
+              >
+            </div>
+          </div>
+          <!-- end of blog wrapper -->
+          <h2>Key Features:</h2>
+
+          <table class="table table-borderless v-align-center">
+            <tbody>
+              <td>
+                <ul class="list-unstyled">
+                  <li>
+                    <strong>User Authentication</strong><br />
+                    <br />
+                    <p>
+                      <b>Google OAuth Integration: </b>Users can register and
+                      log in using their Google accounts, facilitated by the
+                      django-allauth package. This simplifies the registration
+                      process and enhances security.
+                    </p>
+                    <p>
+                      <b>LoginRequiredMixin: </b>Ensures users must be
+                      authenticated to access certain pages, preventing
+                      unauthorized access and protecting user data.
+                    </p>
+                  </li>
+                  <br />
+                  <li>
+                    <strong>Dynamic List Management</strong><br />
+                    <br />
+                    <p>
+                      <b>Drag-and-Drop Reordering: </b>Allows users to
+                      dynamically reorder their list of favorite cars. Changes
+                      are immediately reflected in the database, enhancing user
+                      interaction and data management.
+                    </p>
+                    <p>
+                      <b>HTMX Integration: </b>Provides a seamless and
+                      interactive user experience without requiring complex
+                      JavaScript frameworks. Simplifies the development process
+                      and ensures smooth page updates.
+                    </p>
+                  </li>
+                  <br />
+                  <li>
+                    <strong>User-Friendly Interface</strong><br />
+                    <br />
+                    <p>
+                      <b>Template Inheritance: </b>Utilizes Django's template
+                      inheritance mechanism to create a consistent and visually
+                      appealing design. A base template includes common
+                      elements, while child templates override specific blocks
+                      for a cohesive and easily modifiable interface.
+                    </p>
+                  </li>
+                  <br />
+                  <li>
+                    <strong>Security Features</strong><br />
+                    <br />
+                    <p>
+                      <b>CSRF Protection: </b>Django's built-in Cross-Site
+                      Request Forgery protection ensures secure form
+                      submissions, preventing malicious attacks.
+                    </p>
+                    <p>
+                      <b>Environment Variables: </b> Sensitive information such
+                      as API keys and database passwords are stored in
+                      environment variables, enhancing security.
+                    </p>
+                  </li>
+                  <br />
+                  <li>
+                    <strong>Code Organization and Performance</strong><br />
+                    <br />
+                    <p>
+                      <b>Modular Design: </b>Logic is divided into smaller
+                      Django applications within the project, improving code
+                      organization, maintainability, and scalability.
+                    </p>
+                    <p>
+                      <b>Efficient Code Execution: </b>Most functionality is
+                      implemented in Django models or utility files rather than
+                      views, reducing loading and processing costs.
+                    </p>
+                    <p>
+                      <b>Optimized Testing: </b>Utilizes the setUp method for
+                      handling expensive setup operations, saving time and
+                      resources, and improving test reliability.
+                    </p>
+                    <p>
+                      <b>Page Object Pattern: </b>Follows the DRY principle,
+                      creating an interface between web page elements and tests
+                      to minimize code duplication and enhance test robustness.
+                    </p>
+                  </li>
+                  <br />
+                </ul>
+              </td>
+            </tbody>
+          </table>
+        </div>
+        <!-- end of container -->
+      </section>
+      <!-- end of blog section -->
+    </div>
+
+    <!-- footer -->
+    <div class="container">
+      <footer class="footer">
+        <p class="mb-0">
+          Maciej Jaroszewski
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          | <a href="sitemap.html">Sitemap</a>
+        </p>
+        <div class="social-links text-right m-auto ml-sm-auto">
+          <a
+            href="https://github.com/mjaroszewski1979"
+            class="link"
+            target="_blank"
+            ><i class="ti-github"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100058399907662"
+            class="link"
+            target="_blank"
+            ><i class="ti-facebook"></i
+          ></a>
+          <a
+            href="mailto:mjaroszewski1979@gmail.com"
+            class="link"
+            target="_blank"
+            ><i class="ti-google"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/mjaroszewski/"
+            class="link"
+            target="_blank"
+            ><i class="ti-linkedin"></i
+          ></a>
+        </div>
+      </footer>
+    </div>
+    <!-- end of page footer -->
+
+    <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
     <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
-
-</body>
+  </body>
 </html>
